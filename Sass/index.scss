@@ -1,0 +1,261 @@
+@import "variables";
+
+/*CARROUSEL*/
+
+#carrousel{
+    background-image:
+    linear-gradient(to top, transparent 90%, white),
+    linear-gradient(to bottom, transparent 90%, white),
+    url(../images/fond/Setupfond.jpg);
+    background: {
+        size: 120em;
+        repeat: no-repeat;
+        position: bottom 57% center;
+    };
+
+    height: 60vh;
+    position: relative;
+
+    &::after{
+        content: "";
+        display: block;
+        @include taille(5vh, 100%);
+        background: linear-gradient(to bottom, white, transparent);
+        position: absolute;
+        bottom: -5vh;
+    }
+
+    &::before{
+        content: "";
+        display: block;
+        @include taille(5vh, 100%);
+        background: linear-gradient(to top, white, transparent);
+        position: absolute;
+        top: -5vh;
+    }
+}
+
+input[type=radio]{
+  &:first-child {
+      position: absolute;
+      bottom: -30px;
+      left: 43%;
+  }
+  &:nth-child(2) {
+      position: absolute;
+      bottom: -30px;
+      left: 48%;
+  }
+  &:nth-child(3) {
+      position: absolute;
+      bottom: -30px;
+      left: 53%;
+  }
+}
+
+.card {
+  position: absolute;
+  @include taille(100%,60%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+.containcarrousel {
+  @include taille(60%, 100%);
+  max-width: 50em;
+  max-height: 37.5em;
+  position: relative;
+  top: 5em;
+  margin: auto;
+}
+
+.cards {
+  position: relative;
+  @include taille(100%,100%);
+  margin-bottom: 20px;
+}
+
+img[alt="imagecarrou"] {
+  @include taille(100%,100%);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #imagecarrou-3, #item-2:checked ~ .cards #imagecarrou-1, #item-3:checked ~ .cards #imagecarrou-2 {
+  transform: translatex(-40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #imagecarrou-2, #item-2:checked ~ .cards #imagecarrou-3, #item-3:checked ~ .cards #imagecarrou-1 {
+  transform: translatex(40%) scale(.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #imagecarrou-1, #item-2:checked ~ .cards #imagecarrou-2, #item-3:checked ~ .cards #imagecarrou-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+  img[alt="imagecarrou"] {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+
+/*CATEGORIE DE PRODUIT*/
+
+#categorie{
+  text-align: center; 
+  padding: 1em;
+  display: table-cell;
+  vertical-align: middle;
+  border-collapse: separate;
+  border-spacing:5em;
+  h2{
+    @include titre2;
+  }
+}
+
+.cardcate{
+  @include card(21em ,20em);
+  display: table-cell;
+  div#ordi{
+    @include taille(10em, 20em);
+    background: url(../images/CateProduct/Ordi.jpg){
+      size: cover;
+      repeat : no-repeat;
+      position: bottom 60% center;
+    };
+   }
+  div#periph{
+   @include taille(10em, 20em);
+   background: url(../images/CateProduct/peripherique.jpg){
+     size: cover;
+     repeat : no-repeat;
+     position: bottom 60% center;
+   };
+  }
+   div#compos{
+    @include taille(10em, 20em);
+    background: url(../images/CateProduct/Composants.jpg){
+      size: 50%;
+      repeat : no-repeat;
+      position: center;
+    };
+  }
+  h3{
+    font-family: $familytitre;
+    font-size: 2em;
+  }
+  ul{
+    list-style-type: circle;
+    text-align: left;
+    margin: 0.2em 0 0 2em;
+    font-family: $family2;
+    font-size: $texte;
+    font-weight: bolder;
+    line-height: 1.5;
+    &::before{
+      content: "";
+      display: block;
+      height: 2px;
+      width: 85%;
+      background: $vert;
+      margin-bottom: 0.5em;
+    }
+    li:hover{
+      color: $bleu;
+      text-decoration: underline $bleu;
+      cursor: pointer;
+      font-size: 1.3em;
+      transition: all 1s ease;
+    }
+  }
+  span{
+    padding: 0.3em;
+    border-radius: 10px 0 10px 0;
+    font-size: $texte;
+    background: $noir;
+    color: $vert;
+    font-weight: bold;
+    border: 1px solid gray;
+    position: absolute;
+    bottom: -3px;
+    right: -2px; 
+    cursor: pointer;
+    &:hover{
+      font-size: 1.3em;
+      transition: all 1s ease;
+    }
+  }
+}
+
+/*CONFIG*/
+
+#config{
+  text-align: center;
+  padding: 1em;
+  h2{
+    @include titre2;  
+  }
+  h3{
+    font-family: $familytitre;
+    font-size: 2em;
+    &::after{
+      content: "";
+      display: block;
+      height: 3px;
+      width: 85%;
+      background: $vert;
+      margin: 10px auto;
+    }
+  }
+  >p{
+    margin-top: 1em;
+    text-align: left;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+  .configurateur{
+    @include card(31em,30em);
+    display: inline-block;
+    >p{
+      text-align: left;
+      margin-top: 1em;
+      margin-left: 0.5em;
+    }
+    div{
+      @include taille(18em, 30em);
+      background-image:
+        linear-gradient(to top, transparent 90%, white),
+        url(../images/CateProduct/Config.jpg);
+        background: {
+          size: cover;
+          repeat : no-repeat;
+          position: bottom 60% center;
+        };
+     }
+     input{
+       background: $noir;
+       border: none;
+       color: $vert;
+       width: 100%;
+       height: 4.1em;
+       position: absolute;
+       bottom: -1px;
+       left: 0;
+       border-radius: 0 0 20px 20px;
+       font-size: 20px;
+       cursor: pointer;
+     }
+  }
+  
+}
+
+@import "indexmobile";
+
+@import "indextablette";

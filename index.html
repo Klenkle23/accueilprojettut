@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/reset.css">
+<link rel="stylesheet" href="./css/general.css">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<meta property="og:title" content="BYC - Boutique" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="localhost" />
+<meta property="og:image" content="http://www.loremipsum.etc/mon-image.jpg" /> <!-- PAS DIMAGE EN URL POUR MON SITE POUR LE MOMENT -->
+<title>BuildYourComputer</title>
+</head>
+<body>
+    <header>
+        <div id="containhead">
+
+            <a href="index.php"><img src="./images/logo/logonoir.svg" alt="logoBYC" class="logo"></a>
+
+            <input type="search" id="search" placeholder="Search a product..."><button></button>
+
+            <div id="iconshop">Compte</div>
+            <div id="iconuser">Panier</div>
+
+            <nav>
+                <div class="container nav-container">
+                    <input class="checkbox" type="checkbox"/>
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div> 
+                    <div class="menu-items">
+                        <ul id="firstul">
+                            <li>  
+                                <span>Our products <i>&#8964</i></span>
+                                <ul id="produitsmenu">
+                                    <li>Computers</li>
+                                    <li>Computer compenent</li>
+                                    <li>Peripheral devices</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>Build Computer <i>&#8964</i></span> 
+                                <ul id="configmenu">
+                                    <li>Builder for beginner</li>
+                                    <li>Basic builder</li>
+                                </ul>
+                            </li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+<section id="carrousel">
+    <div class="containcarrousel">
+        <input type="radio" name="slider" id="item-1" checked>
+        <input type="radio" name="slider" id="item-2">
+        <input type="radio" name="slider" id="item-3">
+
+        <div class="cards">
+            <label class="card" for="item-1" id="imagecarrou-1">
+                <img src="./images/carrou/photo1.jpg" alt="imagecarrou">
+            </label>
+            <label class="card" for="item-2" id="imagecarrou-2">
+                <img src="./images/carrou/photo2.jpg" alt="imagecarrou">
+            </label>
+            <label class="card" for="item-3" id="imagecarrou-3">
+                <img src="./images/carrou/photo3.jpg" alt="imagecarrou">
+            </label>
+        </div>
+    </div>
+</section>
+
+<section id="categorie">
+    <h2>Our products</h2>
+    <article class="cardcate">
+        <h3>Computers</h3>
+        <div id="ordi"></div>
+        <ul>
+            <li>Desktop computer</li>
+            <li>Laptop</li>
+        </ul>
+        <span>All products</span>
+    </article>
+    <article class="cardcate">
+        <h3>Computer compenent</h3>
+        <div id="compos"></div>
+        <ul>
+            <li>Motherboard</li>
+            <li>Graphic card</li>
+            <li>Processor</li>
+        </ul>
+        <span>All products</span>
+    </article>
+    <article class="cardcate">
+        <h3>Peripheral devices</h3>
+        <div id="periph"></div>
+        <ul>
+            <li>Keyboard, Mouse</li>
+            <li>Monitor</li>
+            <li>Printer</li>
+        </ul>
+        <span>All products</span>
+    </article>
+</section>
+
+<section id="config">
+    <h2>Build Computer</h2>
+    <p>With our PC configurator, you can easily choose from a wide range of components, including CPU, graphics card, memory, storage, case, cooling, and more. to build your new custom PC. We offer two different configurators to open the door of computing to more people, one being for the experienced and the other for the beginners.</p>
+    <article id="debutant" class = "configurateur" >
+        <h3>Builder for beginner</h3>
+        <p>You do not have experience in the field and you want to configure a custom computer, then this configurator is for you. Just answer a simple form without any technical words and get a custom-made computer that meets your needs. </p>
+        <div></div>
+        <form action="./configbasique.php"><input type="submit" value="C'est partie !"></form>
+    </article>
+    <article id="avance" class = "configurateur">
+        <h3>Basic builder</h3>
+        <p>You have experience in the field and you want to configure a custom computer, then this configurator is for you. Select yourself the components that suit you one by one to have a computer that suits you. </p>
+        <div></div>
+        <form action="../configbasique.php"><input type="submit" value="C'est partie !"></form>
+    </article>
+</section>
+
+<footer>
+    <section>
+        <h3>Sitemap</h3>
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="product.php">Our products</a></li>
+            <li><a href="config.php">Builder PC</a></li>
+            <li><a href="contact.php">Contact</a></li>
+        </ul>
+    </section>
+    <section>
+        <ul>
+            <li>Legal Notice</li>
+            <li>Conditions of use</li>
+            <li>Terms and conditions</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Contact</h3>
+        <ul>
+            <li><a href="contact.php">Contact form<a></li>
+            <li>mail@mail.com</li>
+            <li>06 06 06 06 06</li>
+        </ul>
+    </section>
+    <a href="#containhead"><img src="./images/icons/arrow-alt-circle-upcolor.png" alt="Haut de la page" ></a>
+    <span id="copyright">&copy; - BYC 2022 All rights reserved</span>
+</footer>
+</body>
+</html>

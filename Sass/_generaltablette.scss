@@ -1,0 +1,21 @@
+@media (min-width:600px) and (max-width: 1250px) { 
+    .logo{
+        @include taille(150px,200px);
+    }
+
+    #containhead{
+        width: 100%;
+    }
+
+    /*MENU*/
+
+    nav{
+        ul#firstul{
+            width: 95%;
+            left: 2.5%;
+            >li{
+                margin: 0 0 0 0;
+            }  
+        }
+    }
+ }

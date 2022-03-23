@@ -1,0 +1,274 @@
+@import "variables";
+
+body{
+    background: $texture1 {
+        size : cover;
+        repeat : no-repeat;
+    };
+}
+
+/*Header*/
+
+header{
+    text-align: center;
+    height: 200px;
+    position: relative;
+    z-index: 3;
+}
+
+#containhead{
+    width: 80%;
+    margin: auto;
+    #iconuser, #iconshop{
+        float: right;
+    }
+    .logo{
+        float: left;
+    }
+}
+
+.logo{
+    @include taille(200px,240px);
+    cursor: pointer;
+}
+
+.icon{
+    @include taille(30px,40px);
+}
+
+#iconshop{
+    @include taille(50px,50px);
+    padding-right: 1em;
+    position: relative;
+    top : 63px;
+    cursor: pointer;
+    background: url(../images/icons/shopping-basket.svg){
+        size: cover;
+        repeat:no-repeat;
+        position: center;
+    }
+    &:hover{
+        background: url(../images/icons/shopping-basketcolor.svg){
+            size: cover;
+            repeat:no-repeat;
+            position: center;
+        }
+    }
+}
+
+#iconuser{
+    @include taille(55px,50px);
+    padding-right: 1em;
+    position: relative;
+    margin-right: 2em;
+    top : 63px;
+    cursor: pointer;
+    background: url(../images/icons/user.svg){
+        size: 70%  ;
+        repeat:no-repeat;
+        position: center;
+    }
+    &:hover{
+        background: url(../images/icons/usercolor.svg){
+            size: 70%;
+            repeat:no-repeat;
+            position: center;
+        }
+    }
+}
+
+.checkbox{display: none;}
+
+#search{
+    @include taille(50px,55%);
+    border: 1px solid $vert;
+    border-right: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    position: relative;
+    top : 63px;
+
+    + button{
+        @include taille(50px,50px);
+        background: url(../images/icons/search.svg){
+            size : 80%;
+            repeat : no-repeat;
+            position: center;
+            color: white;
+        };
+        border: 1px solid $vert;
+        border-left: none;
+        border-radius: 0 5px 5px 0;
+        position: relative;
+        top : 56px;
+        right: 3.7em;
+        cursor: pointer;
+
+        &:hover{
+            background-color: $noir;
+        };
+    };
+}
+
+/*MENU*/
+
+nav{
+    ul#firstul{
+        position: absolute;
+        bottom: 0;
+        width: 60%;
+        left: 20%;
+        font-size: 2em;
+        font-family: $familytitre;
+        >li{
+            display: inline-block;
+            padding: 0.2em 0.2em 0.2em 0.2em;
+            margin: 0 1em 0.5em 1em;
+            letter-spacing: 2px;
+            cursor: pointer;
+            position: relative;
+            i{
+                position: relative;
+                bottom: 5px;
+            }
+            &:hover{
+                border: 1px solid black;
+                border-radius: 10px 10px 0 0;
+                color: $vert;
+                background-color: $noir;
+                &>ul#produitsmenu{
+                    display: inline-block;
+                    background-color: $noir;
+                    color: white;
+                }
+                >ul#configmenu{
+                    display: inline-block;
+                    background-color: $noir;
+                    color: white;
+                }
+            }
+            ul#produitsmenu{
+                display: none;
+                position: absolute;
+                width: 9em;
+                top: 1.4em;
+                left: -1px;
+                text-align: left;
+                line-height: 1.3;
+                border: 1px solid black;
+                border-radius: 0 10px 10px 10px;
+                padding: 0.2em;
+                text-shadow: none;
+                li:hover{
+                    color: $vert;
+                    &::after{
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        margin: auto;
+                        background: $vert;
+                    }
+                }
+            }
+            ul#configmenu{
+                display: none;
+                position: absolute;
+                width: 10em;
+                top: 1.4em;
+                left: -1px;
+                text-align: left;
+                line-height: 1.3;
+                border: 1px solid black;
+                border-radius: 0 10px 10px 10px;
+                padding: 0.2em;
+                text-shadow: none;
+                li:hover{
+                    color: $vert;
+                    &::after{
+                        content: "";
+                        display: block;
+                        height: 1px;
+                        width: 100%;
+                        margin: auto;
+                        background: $vert;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+
+/*FOOTER*/
+footer{
+    margin-top: 3em;
+    position: relative;
+    background: $noir;
+    box-shadow: 0 0 2em black;
+    color: $vert;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    font-size: $texte;
+    section{
+        padding: 1em;
+        line-height: 1.5;
+        padding-bottom: 0;
+        border-left: 2px solid $bleu;
+        border-right: 2px solid $bleu;
+        text-align: center; 
+        h3{
+            font-weight: bold;
+            font-size: $titre;
+            text-shadow: 5px 5px 5px $violet;
+        }
+        li:hover{
+            color: white;
+            cursor: pointer;
+            text-shadow: 5px 5px 5px $violet;
+        }
+        &:first-child{
+            grid-area: 1 / 1 / 2 / 2;
+            border-left: none;
+            a{
+                text-decoration: none;
+                color: $vert;
+                &:hover{
+                    @extend li:hover;
+                }
+            }
+        }
+        &:nth-child(2){
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        &:nth-child(3){
+            grid-area: 1 / 3 / 2 / 4;
+            border-right: none;
+        }
+    }
+    img{
+        display: block;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 4;
+        @include taille(3em,3em);
+    }
+    span#copyright{
+        background: $bleu;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        grid-area: 2 / 1 / 3 / 4;
+    }
+}
+
+/*VERSION TABLETTE*/
+@import "generaltablette";
+
+/*VERSION MOBILE*/
+@import "generalmobile";

@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=League+Gothic&display=swap");
+/*CARROUSEL*/
+/* line 5, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#carrousel {
+  background-image: linear-gradient(to top, transparent 90%, white), linear-gradient(to bottom, transparent 90%, white), url(../images/fond/Setupfond.jpg);
+  background-size: 120em;
+  background-repeat: no-repeat;
+  background-position: bottom 57% center;
+  height: 60vh;
+  position: relative;
+}
+
+/* line 19, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#carrousel::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5vh;
+  background: linear-gradient(to bottom, white, transparent);
+  position: absolute;
+  bottom: -5vh;
+}
+
+/* line 28, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#carrousel::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5vh;
+  background: linear-gradient(to top, white, transparent);
+  position: absolute;
+  top: -5vh;
+}
+
+/* line 39, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+input[type=radio]:first-child {
+  position: absolute;
+  bottom: -30px;
+  left: 43%;
+}
+
+/* line 44, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+input[type=radio]:nth-child(2) {
+  position: absolute;
+  bottom: -30px;
+  left: 48%;
+}
+
+/* line 49, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+input[type=radio]:nth-child(3) {
+  position: absolute;
+  bottom: -30px;
+  left: 53%;
+}
+
+/* line 56, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .4s ease;
+  cursor: pointer;
+}
+
+/* line 66, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.containcarrousel {
+  width: 100%;
+  height: 60%;
+  max-width: 50em;
+  max-height: 37.5em;
+  position: relative;
+  top: 5em;
+  margin: auto;
+}
+
+/* line 75, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 81, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+img[alt="imagecarrou"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* line 87, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#item-1:checked ~ .cards #imagecarrou-3, #item-2:checked ~ .cards #imagecarrou-1, #item-3:checked ~ .cards #imagecarrou-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+/* line 93, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#item-1:checked ~ .cards #imagecarrou-2, #item-2:checked ~ .cards #imagecarrou-3, #item-3:checked ~ .cards #imagecarrou-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+/* line 99, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#item-1:checked ~ .cards #imagecarrou-1, #item-2:checked ~ .cards #imagecarrou-2, #item-3:checked ~ .cards #imagecarrou-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+/* line 103, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#item-1:checked ~ .cards #imagecarrou-1 img[alt="imagecarrou"], #item-2:checked ~ .cards #imagecarrou-2 img[alt="imagecarrou"], #item-3:checked ~ .cards #imagecarrou-3 img[alt="imagecarrou"] {
+  box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+/*CATEGORIE DE PRODUIT*/
+/* line 111, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#categorie {
+  text-align: center;
+  padding: 1em;
+  display: table-cell;
+  vertical-align: middle;
+  border-collapse: separate;
+  border-spacing: 5em;
+}
+
+/* line 118, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#categorie h2 {
+  font-size: 3em;
+  font-family: "League Gothic", sans-serif;
+  text-decoration: underline #0BD49F;
+  margin-bottom: 1em;
+}
+
+/* line 123, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate {
+  background: white;
+  margin: 2em;
+  padding: 0.5em 0 0 0;
+  border-radius: 20px;
+  width: 20em;
+  height: 21em;
+  border: 1px dashed #0BD49F;
+  box-shadow: 0 0 2em black;
+  text-align: center;
+  position: relative;
+  display: table-cell;
+}
+
+/* line 126, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate div#ordi {
+  width: 20em;
+  height: 10em;
+  background: url(../images/CateProduct/Ordi.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 60% center;
+}
+
+/* line 134, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate div#periph {
+  width: 20em;
+  height: 10em;
+  background: url(../images/CateProduct/peripherique.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 60% center;
+}
+
+/* line 142, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate div#compos {
+  width: 20em;
+  height: 10em;
+  background: url(../images/CateProduct/Composants.jpg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 150, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 2em;
+}
+
+/* line 154, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate ul {
+  list-style-type: circle;
+  text-align: left;
+  margin: 0.2em 0 0 2em;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2em;
+  font-weight: bolder;
+  line-height: 1.5;
+}
+
+/* line 162, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate ul::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 85%;
+  background: #0BD49F;
+  margin-bottom: 0.5em;
+}
+
+/* line 170, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate ul li:hover {
+  color: #0B31D4;
+  text-decoration: underline #0B31D4;
+  cursor: pointer;
+  font-size: 1.3em;
+  transition: all 1s ease;
+}
+
+/* line 178, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate span {
+  padding: 0.3em;
+  border-radius: 10px 0 10px 0;
+  font-size: 1.2em;
+  background: #3B444b;
+  color: #0BD49F;
+  font-weight: bold;
+  border: 1px solid gray;
+  position: absolute;
+  bottom: -3px;
+  right: -2px;
+  cursor: pointer;
+}
+
+/* line 190, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+.cardcate span:hover {
+  font-size: 1.3em;
+  transition: all 1s ease;
+}
+
+/*CONFIG*/
+/* line 199, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config {
+  text-align: center;
+  padding: 1em;
+}
+
+/* line 202, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config h2 {
+  font-size: 3em;
+  font-family: "League Gothic", sans-serif;
+  text-decoration: underline #0BD49F;
+  margin-bottom: 1em;
+}
+
+/* line 205, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config h3 {
+  font-family: "League Gothic", sans-serif;
+  font-size: 2em;
+}
+
+/* line 208, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config h3::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 85%;
+  background: #0BD49F;
+  margin: 10px auto;
+}
+
+/* line 217, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config > p {
+  margin-top: 1em;
+  text-align: left;
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+/* line 223, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config .configurateur {
+  background: white;
+  margin: 2em;
+  padding: 0.5em 0 0 0;
+  border-radius: 20px;
+  width: 30em;
+  height: 31em;
+  border: 1px dashed #0BD49F;
+  box-shadow: 0 0 2em black;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+
+/* line 226, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config .configurateur > p {
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 0.5em;
+}
+
+/* line 231, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config .configurateur div {
+  width: 30em;
+  height: 18em;
+  background-image: linear-gradient(to top, transparent 90%, white), url(../images/CateProduct/Config.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom 60% center;
+}
+
+/* line 242, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/index.scss */
+#config .configurateur input {
+  background: #3B444b;
+  border: none;
+  color: #0BD49F;
+  width: 100%;
+  height: 4.1em;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  border-radius: 0 0 20px 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  /* line 2, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indexmobile.scss */
+  #carrousel {
+    display: none;
+  }
+  /* line 4, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indexmobile.scss */
+  #categorie {
+    display: table;
+  }
+  /* line 6, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indexmobile.scss */
+  #categorie h2 {
+    font-size: 3em;
+    font-family: "League Gothic", sans-serif;
+    text-decoration: underline #0BD49F;
+    margin-bottom: 1em;
+  }
+  /* line 10, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indexmobile.scss */
+  .cardcate {
+    background: white;
+    margin: 2em;
+    padding: 0.5em 0 0 0;
+    border-radius: 20px;
+    width: 20em;
+    height: 21em;
+    border: 1px dashed #0BD49F;
+    box-shadow: 0 0 2em black;
+    text-align: center;
+    position: relative;
+    display: block;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1250px) {
+  /* line 2, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indextablette.scss */
+  #categorie {
+    text-align: center;
+    padding: 1em;
+    display: block;
+  }
+  /* line 6, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indextablette.scss */
+  #categorie h2 {
+    font-size: 3em;
+    font-family: "League Gothic", sans-serif;
+    text-decoration: underline #0BD49F;
+    margin-bottom: 1em;
+  }
+  /* line 10, ../../Users/micki/OneDrive/Bureau/BYCMobilefirst/sass/_indextablette.scss */
+  .cardcate {
+    background: white;
+    margin: 2em;
+    padding: 0.5em 0 0 0;
+    border-radius: 20px;
+    width: 20em;
+    height: 21em;
+    border: 1px dashed #0BD49F;
+    box-shadow: 0 0 2em black;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

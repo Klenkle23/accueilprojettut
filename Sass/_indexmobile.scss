@@ -1,0 +1,14 @@
+@media (max-width: 600px) { 
+    #carrousel{display: none;}
+    
+    #categorie{
+        display: table;
+        h2{
+          @include titre2;
+        }
+      }
+      .cardcate{
+        @include card(21em ,20em);
+        display: block;
+      }
+}

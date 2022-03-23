@@ -1,0 +1,55 @@
+
+// taille du logo et icon
+@mixin taille ($h,$l:$h) {
+    width: $l;
+    height: $h;
+}
+
+//FONTSIZE
+$texte:1.2em;
+$titre:1.5em;
+
+//couleur et texture principale
+$bleu : #0B31D4;
+$violet : #6C4DC2;
+$vert : #0BD49F;
+$noir : #3B444b;
+
+$texture1 : url(../images/texture/Texturewhite.jpg);
+
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100&family=League+Gothic&display=swap');
+$familytitre:'League Gothic', sans-serif;
+$family2: 'Fira Sans', sans-serif;
+
+
+//carte
+@mixin card($h,$l:$h){
+    background: white;
+    margin: 2em;
+    padding: 0.5em 0 0 0;
+    border-radius: 20px;
+    @include taille($h,$l);
+    border: 1px dashed $vert;
+    box-shadow: 0 0 2em black;
+    text-align: center;
+    position: relative;
+}
+
+//TITRE 2
+
+@mixin titre2 {
+    font-size: 3em;
+    font-family: $familytitre;
+    text-decoration: underline $vert;
+    margin-bottom: 1em;
+}
+   
+//SIGNIN-UP
+
+@mixin actions {
+    &:before, &:after {
+    @content ;
+}}
+
+

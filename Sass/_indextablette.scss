@@ -1,0 +1,14 @@
+@media (min-width:600px) and (max-width: 1250px) { 
+    #categorie{
+        text-align: center; 
+        padding: 1em;
+        display: block;
+        h2{
+          @include titre2;
+        }
+      }
+      .cardcate{
+        @include card(21em ,20em);
+        display: inline-block;
+      }
+ }
